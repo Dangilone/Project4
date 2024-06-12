@@ -1,6 +1,7 @@
 *{
     font-family: 'Inter', sans-serif;
     margin: 0;
+    scroll-behavior: smooth;
 }
 section{
     background-position: center;
@@ -13,18 +14,17 @@ section{
     width: 300px;
     height: 300px;
     background-color: red;
-    animation-name: a;
+    animation-name: z;
     animation-duration: 2s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     border-radius: 0;
 }
-@keyframes a{
+@keyframes z{
         from{background-color: red; width: 300px;height: 300px;border-radius: 0;}
         50%{background-color: black;width: 100px; height:500px;border-radius: 100px;}
         to{background-color: green; width: 50px; height: 50px; border-radius: 50px;}
 }
-
 #main{
     background-image: url(./img/bgMAIN.png);
     
@@ -42,8 +42,12 @@ section{
 #comments{
     background-image: url(./img/bgCOMMENTS.png);
 }
+#footer{
+    background-color: darkorchid;
+    min-height: 15vh;
+}
 
-.main-block,.about-block,.skills-block,.works-block,.comments-block{
+.main-block,.about-block,.skills_block,.works_block,.comments-block{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,12 +103,12 @@ section{
     position: absolute;
     bottom: 30px;
     left: 30px;
-    animation-name: b;
+    animation-name: a;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-@keyframes b{
+@keyframes a{
     from{bottom: 30px;}
     to{bottom: 120px;}
 }
@@ -155,4 +159,182 @@ section{
 }
 .about-card img{
     padding-bottom: 20px;
+}
+.skills-card{
+    background-image: url(/img/form3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.moving-cloud{
+    background: url(/img/cloud.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    animation-name: b;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes b{
+    from{bottom: 30px;left: 100px}
+    to{bottom: 600px;left: 300px}
+}
+.skills-card p{
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 500px;
+    font-family: 'Comfortaa';
+}
+.works_block{
+    display: flex;
+    justify-content: space-around;
+}
+.works_block img{
+    margin: 0 20px;
+    width: 30%;
+    box-shadow: 7px 7px 0 black;
+}
+.comments-block{
+    max-width: 1150px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.comments-card{
+    background-image: url(/img/card.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 300px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comments-card h3{
+    font-family: 'Comfortaa';
+    font-size: 18px;
+    padding: 10px;
+}
+.comments-card p{
+    font-family: 'Comfortaa';
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.comment{
+    background-image: url(/img/comment.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 327px;
+    height: 161px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comment p{
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    max-width: 250px;
+}
+.footer-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.socials{
+    margin-top: 50px;
+}
+.name{
+    text-align: center;
+}
+.year h3{
+    text-align: center;
+    margin-top: 50px;
+}
+.Diana{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.swiper {
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+  .fixed-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .nav-links{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-right: 150px;
+  }
+  .nav-link{
+    width: 112px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    background-color: #FFF;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Comfortaa';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transition-duration: 0.3s;
+}
+.nav-link:hover{
+    background-color: #BBFF2C;
+    transform: scale(1.2,1.2);
+    
+}
+.logo{
+    color: #BBFF2C;
+    font-size: 80px;
+    padding-left: 50px;
+}
+.active{
+    background-color: #BBFF2C;
+    color: red;
 }
