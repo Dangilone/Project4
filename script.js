@@ -1,3 +1,10 @@
+let button = document.querySelector('.mobile-button')
+button.addEventListener('click', function(event){
+    document.querySelector('.mobile-menu').classList.toggle('hide')
+    document.querySelectorAll('.mobile_btn').forEach(function(item){
+        item.classList.toggle('cross')
+    })
+})
 let menu = document.querySelector('.fixed-menu')
 menu.addEventListener('click', function(event){
     let clickTarget = event.target;
